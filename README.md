@@ -8,4 +8,4 @@
 - Tailwind CSS
 - TypeScript
 - Firebase
-- Shad/CN
+- Shadcn/ui
