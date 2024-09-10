@@ -17,6 +17,8 @@ async function getProjects(): Promise<ProjectsData[]> {
       }
     })
 
+    console.log(projects)
+
     return projects
   } catch (err) {
     console.error(err)
