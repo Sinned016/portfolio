@@ -10,4 +10,4 @@
 - Firebase
 - Shadcn/ui
 
-Hosting with Vercel.
+Hosting with Vercel. https://portfolio1-flame-nine.vercel.app/
