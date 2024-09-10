@@ -1,4 +1,4 @@
-import db from '@/lib/firebaseConfig'
+import db from '@/config/firebaseConfig'
 import { ProjectsData } from '@/types/projectTypes'
 import { collection, getDocs } from 'firebase/firestore'
 import React from 'react'

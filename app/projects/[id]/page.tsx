@@ -1,4 +1,4 @@
-import db from '@/lib/firebaseConfig'
+import db from '@/config/firebaseConfig'
 import { ProjectsData } from '@/types/projectTypes'
 import { ArrowLeftIcon } from '@radix-ui/react-icons'
 import { doc, getDoc } from 'firebase/firestore'
