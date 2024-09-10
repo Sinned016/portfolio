@@ -1,5 +1,4 @@
 import Image from 'next/image'
-import { formatDate } from '@/lib/utils'
 import React from 'react'
 import { ProjectsData } from '@/types/projectTypes'
 import Link from 'next/link'
