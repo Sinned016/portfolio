@@ -81,7 +81,17 @@ export default function About() {
         <div className='mb-12'>
           <h3 className='mb-2 text-xl font-bold'>Current Time</h3>
           <p className='mb-4 font-light'>
-            Write about what ive done after school, what i&#39;ve studied etc..
+            It&#39;s been about three months since I finished school
+            (2024-06-14). During this time, I&#39;ve worked on several smaller
+            projects, focusing on improving my existing skills while also
+            learning new programs and technologies.
+          </p>
+          <p className='font-light'>
+            Over the past few months, I&#39;ve learned Next.js and Tailwind, and
+            I&#39;ve sharpened my TypeScript skills along with my overall coding
+            abilities. Currently, I&#39;m working on this portfolio page as well
+            as a few smaller projects, including finishing a website I&#39;m
+            building for my dad which will showcase his books.
           </p>
         </div>
 
