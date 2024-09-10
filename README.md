@@ -9,3 +9,5 @@
 - TypeScript
 - Firebase
 - Shadcn/ui
+
+Hosting with Vercel.
