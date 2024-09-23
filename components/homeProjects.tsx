@@ -11,6 +11,10 @@ type Projectsprops = {
 export default function HomeProjects({ projects, limit }: Projectsprops) {
   const displayedProjects = limit ? projects.slice(0, limit) : projects
 
+  if (displayedProjects.length === 0) {
+    return <div>No projects available.</div>
+  }
+
   return (
     <ul className='mb-6 grid grid-cols-1 gap-8 sm:grid-cols-2'>
       {displayedProjects.map(project => (
