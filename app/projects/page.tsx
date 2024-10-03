@@ -3,6 +3,7 @@ import { ProjectsData } from '@/types/projectTypes'
 import { collection, getDocs } from 'firebase/firestore'
 import React from 'react'
 import HomeProjects from '@/components/homeProjects'
+export const revalidate = 5
 
 async function getProjects(): Promise<ProjectsData[]> {
   const docsRef = collection(db, 'projects')
