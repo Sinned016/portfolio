@@ -1,3 +1,5 @@
+import { Timestamp } from 'firebase/firestore'
+
 type Stack = {
   [key: string]: string
 }
@@ -15,4 +17,5 @@ export type ProjectsData = {
   image1: string
   image2: string
   linkToPage: string
+  createdAt: Timestamp
 }

@@ -1,15 +1,16 @@
 import db from '@/config/firebaseConfig'
 import { ProjectsData } from '@/types/projectTypes'
-import { collection, getDocs } from 'firebase/firestore'
+import { collection, getDocs, orderBy, query } from 'firebase/firestore'
 import React from 'react'
 import HomeProjects from '@/components/homeProjects'
-export const revalidate = 5
+export const revalidate = 60
 
 async function getProjects(): Promise<ProjectsData[]> {
   const docsRef = collection(db, 'projects')
+  const q = query(docsRef, orderBy('createdAt', 'desc'))
 
   try {
-    const querySnapshot = await getDocs(docsRef)
+    const querySnapshot = await getDocs(q)
     const projects: ProjectsData[] = querySnapshot.docs.map(doc => {
       const data = doc.data() as Omit<ProjectsData, 'id'> // Ensure id is not in data
       return {

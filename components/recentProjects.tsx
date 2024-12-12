@@ -1,17 +1,19 @@
-'use client'
-import { useEffect, useState } from 'react'
 import db from '@/config/firebaseConfig'
 import { ProjectsData } from '@/types/projectTypes'
-import { collection, getDocs } from 'firebase/firestore'
+import { collection, getDocs, orderBy, query } from 'firebase/firestore'
 import Link from 'next/link'
 import HomeProjects from './homeProjects'
+
+export const revalidate = 5
 
 // Function to fetch projects from Firebase
 async function getProjects(): Promise<ProjectsData[]> {
   const docsRef = collection(db, 'projects')
+  const q = query(docsRef, orderBy('createdAt', 'desc'))
 
   try {
-    const querySnapshot = await getDocs(docsRef)
+    const querySnapshot = await getDocs(q)
+
     const projects: ProjectsData[] = querySnapshot.docs.map(doc => {
       const data = doc.data() as Omit<ProjectsData, 'id'>
       return {
@@ -27,29 +29,18 @@ async function getProjects(): Promise<ProjectsData[]> {
 }
 
 // Main component
-export default function RecentProjects() {
-  const [projects, setProjects] = useState<ProjectsData[]>([]) // State to hold projects
-  const [loading, setLoading] = useState<boolean>(true) // Loading state
+export default async function RecentProjects() {
+  const projects = await getProjects()
 
-  useEffect(() => {
-    const fetchProjects = async () => {
-      const projectsData = await getProjects()
-      setProjects(projectsData)
-      setLoading(false) // Set loading to false after fetching
-    }
-
-    fetchProjects()
-  }, []) // Empty dependency array to run once on mount
+  console.log('hello')
+  console.log(projects)
 
   return (
     <section>
       <div>
         <h2 className='title mb-12'>Recent projects</h2>
-        {loading ? (
-          <div className='mb-4'>Loading...</div>
-        ) : (
-          <HomeProjects projects={projects} limit={2} />
-        )}
+
+        <HomeProjects projects={projects} limit={2} />
 
         <Link
           className='font-light text-muted-foreground underline'
