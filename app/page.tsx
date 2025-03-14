@@ -1,6 +1,7 @@
 import HomeAbout from '@/components/homeAbout'
 import Intro from '@/components/intro'
 import RecentProjects from '@/components/recentProjects'
+export const revalidate = 60
 
 export default async function Home() {
   return (

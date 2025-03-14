@@ -4,8 +4,6 @@ import { collection, getDocs, orderBy, query } from 'firebase/firestore'
 import Link from 'next/link'
 import HomeProjects from './homeProjects'
 
-export const revalidate = 60
-
 // Function to fetch projects from Firebase
 async function getProjects(): Promise<ProjectsData[]> {
   const docsRef = collection(db, 'projects')
