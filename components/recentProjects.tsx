@@ -30,7 +30,6 @@ async function getProjects(): Promise<ProjectsData[]> {
 export default async function RecentProjects() {
   const projects = await getProjects()
 
-  console.log('hello')
   console.log(projects)
 
   return (

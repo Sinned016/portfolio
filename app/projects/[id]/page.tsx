@@ -1,3 +1,4 @@
+import ImageSlider from '@/components/imageSlider'
 import db from '@/config/firebaseConfig'
 import { ProjectsData } from '@/types/projectTypes'
 import { ArrowLeftIcon } from '@radix-ui/react-icons'
@@ -49,14 +50,7 @@ export default async function Project({ params }: { params: { id: string } }) {
           <span>Back to projects</span>
         </Link>
 
-        <div className='relative mb-2 h-72 rounded-lg bg-muted sm:h-[380px]'>
-          <Image
-            className='rounded-lg object-cover object-center'
-            src={project.image1}
-            alt={project.name}
-            fill
-          ></Image>
-        </div>
+        <ImageSlider images={project.images}/>
 
         <div className='mb-6'>
           <a
