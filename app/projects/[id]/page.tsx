@@ -3,7 +3,6 @@ import db from '@/config/firebaseConfig'
 import { ProjectsData } from '@/types/projectTypes'
 import { ArrowLeftIcon } from '@radix-ui/react-icons'
 import { doc, getDoc } from 'firebase/firestore'
-import Image from 'next/image'
 import Link from 'next/link'
 import React from 'react'
 
