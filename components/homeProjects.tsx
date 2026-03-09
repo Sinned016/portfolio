@@ -22,7 +22,7 @@ export default function HomeProjects({ projects, limit }: Projectsprops) {
         <li className='group relative' key={project.id}>
           <Link href={`/projects/${project.id}`}>
             <p>{project.name}</p>
-            
+
             <ImageWithLoader
               src={project.images?.[0] ?? project.image1}
               alt={project.name}
@@ -53,7 +53,7 @@ export default function HomeProjects({ projects, limit }: Projectsprops) {
 function ImageWithLoader({ src, alt }: { src: string; alt: string }) {
   const [loaded, setLoaded] = useState(false)
   return (
-    <div className='h-72 w-72 overflow-hidden rounded-lg bg-muted sm:h-60 relative'>
+    <div className='h-72 w-full overflow-hidden rounded-lg bg-muted sm:h-60 relative'>
       {!loaded && <div className='absolute inset-0 bg-zinc-800 animate-pulse rounded-lg' />}
       <Image
         src={src}
