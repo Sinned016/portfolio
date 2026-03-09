@@ -1,6 +1,5 @@
-"use client"
 import Image from 'next/image'
-import React, { useState } from 'react'
+import React from 'react'
 import { ProjectsData } from '@/types/projectTypes'
 import Link from 'next/link'
 
@@ -22,11 +21,14 @@ export default function HomeProjects({ projects, limit }: Projectsprops) {
         <li className='group relative' key={project.id}>
           <Link href={`/projects/${project.id}`}>
             <p>{project.name}</p>
-
-            <ImageWithLoader
-              src={project.images?.[0] ?? project.image1}
-              alt={project.name}
-            />
+            <div className='h-72 w-72 overflow-hidden rounded-lg bg-muted sm:h-60'>
+              <Image
+                className='rounded-lg object-cover object-center'
+                src={project.images?.[0] ?? project.image1}
+                alt={project.name}
+                fill
+              ></Image>
+            </div>
 
             <div className='absolute inset-[6px] rounded-lg bg-background/70 opacity-0 transition-opacity duration-500 group-hover:opacity-100' />
 
@@ -45,25 +47,5 @@ export default function HomeProjects({ projects, limit }: Projectsprops) {
         </li>
       ))}
     </ul>
-  )
-}
-
-
-// Component to show a skeleton while the image is loading
-function ImageWithLoader({ src, alt }: { src: string; alt: string }) {
-  const [loaded, setLoaded] = useState(false)
-  return (
-    <div className='h-72 w-full overflow-hidden rounded-lg bg-muted sm:h-60 relative'>
-      {!loaded && <div className='absolute inset-0 bg-zinc-800 animate-pulse rounded-lg' />}
-      <Image
-        src={src}
-        alt={alt}
-        fill
-        className={`rounded-lg object-cover object-center transition-opacity duration-500 ${
-          loaded ? 'opacity-100' : 'opacity-0'
-        }`}
-        onLoadingComplete={() => setLoaded(true)}
-      />
-    </div>
   )
 }
