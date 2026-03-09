@@ -22,14 +22,11 @@ export default function HomeProjects({ projects, limit }: Projectsprops) {
         <li className='group relative' key={project.id}>
           <Link href={`/projects/${project.id}`}>
             <p>{project.name}</p>
-            <div className='h-72 w-72 overflow-hidden rounded-lg bg-muted sm:h-60'>
-              <Image
-                className='rounded-lg object-cover object-center'
-                src={project.images?.[0] ?? project.image1}
-                alt={project.name}
-                fill
-              ></Image>
-            </div>
+            
+            <ImageWithLoader
+              src={project.images?.[0] ?? project.image1}
+              alt={project.name}
+            />
 
             <div className='absolute inset-[6px] rounded-lg bg-background/70 opacity-0 transition-opacity duration-500 group-hover:opacity-100' />
 
