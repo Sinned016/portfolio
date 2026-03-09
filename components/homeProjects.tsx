@@ -1,5 +1,6 @@
+"use client"
 import Image from 'next/image'
-import React from 'react'
+import React, { useState } from 'react'
 import { ProjectsData } from '@/types/projectTypes'
 import Link from 'next/link'
 
@@ -47,5 +48,25 @@ export default function HomeProjects({ projects, limit }: Projectsprops) {
         </li>
       ))}
     </ul>
+  )
+}
+
+
+// Component to show a skeleton while the image is loading
+function ImageWithLoader({ src, alt }: { src: string; alt: string }) {
+  const [loaded, setLoaded] = useState(false)
+  return (
+    <div className='h-72 w-72 overflow-hidden rounded-lg bg-muted sm:h-60 relative'>
+      {!loaded && <div className='absolute inset-0 bg-zinc-800 animate-pulse rounded-lg' />}
+      <Image
+        src={src}
+        alt={alt}
+        fill
+        className={`rounded-lg object-cover object-center transition-opacity duration-500 ${
+          loaded ? 'opacity-100' : 'opacity-0'
+        }`}
+        onLoadingComplete={() => setLoaded(true)}
+      />
+    </div>
   )
 }
