@@ -35,11 +35,17 @@ export default function About() {
           <li className='font-light'>React</li>
           <li className='font-light'>Next.js</li>
           <li className='font-light'>Node.js</li>
+          <li className='font-light'>Express.js</li>
           <li className='font-light'>MongoDB</li>
+          <li className='font-light'>Mongoose</li>
           <li className='font-light'>Firebase</li>
+          <li className='font-light'>GraphQL</li>
           <li className='font-light'>Git</li>
           <li className='font-light'>MUI</li>
-          <li className='font-light'>Tailwind CSS</li>
+          <li className='font-light'>Tailwind</li>
+          <li className='font-light'>Shopify</li>
+          <li className='font-light'>Framer Motion</li>
+          <li className='font-light'>Payload CMS</li>
           <li className='font-light'>Figma</li>
           <li className='font-light'>Agile methodologies</li>
         </div>
