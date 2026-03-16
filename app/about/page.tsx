@@ -19,7 +19,7 @@ export default function About() {
           </div>
           <h1 className='title mb-6'>About me</h1>
           <p className='font-light'>
-            I am a collaborative 27-year-old who's currently working as a
+            I am a collaborative 28-year-old who&#39;s currently working as a
             Fullstack developer for Dreamify. Prior to this role, I completed a
             intership and attended KYH vocational school, where I built a strong
             foundation in software development.
