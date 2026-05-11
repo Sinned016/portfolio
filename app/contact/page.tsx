@@ -6,7 +6,7 @@ export default function Contact() {
       <div className='container max-w-3xl'>
         <h1 className='title mb-12'>Contact Page</h1>
 
-        <h3 className='mb-6 text-xl font-bold'>Work in progress</h3>
+        <h3 className='mb-6 text-xl font-bold'>Work in progress.</h3>
 
         <div>
           <p>

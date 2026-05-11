@@ -7,10 +7,10 @@ export default function HomeAbout() {
       <div className='mb-5'>
         <h2 className='title'>About me</h2>
         <p className='mt-3 font-light text-muted-foreground'>
-          I am a collaborative 26-year-old who recently completed my education
-          as a frontend developer. I attended a vocational school in Stockholm
-          called KYH and am now highly motivated and ready to step into the
-          professional world.
+          I am a collaborative 28-year-old who&#39;s currently working as a
+          Fullstack developer for Dreamify. Prior to this role, I completed a
+          intership and attended KYH vocational school, where I built a strong
+          foundation in software development.
         </p>
       </div>
 

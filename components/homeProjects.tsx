@@ -24,7 +24,7 @@ export default function HomeProjects({ projects, limit }: Projectsprops) {
             <div className='h-72 w-72 overflow-hidden rounded-lg bg-muted sm:h-60'>
               <Image
                 className='rounded-lg object-cover object-center'
-                src={project.image1}
+                src={project.images?.[0] ?? project.image1}
                 alt={project.name}
                 fill
               ></Image>

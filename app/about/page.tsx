@@ -19,10 +19,10 @@ export default function About() {
           </div>
           <h1 className='title mb-6'>About me</h1>
           <p className='font-light'>
-            I am a collaborative 26-year-old who recently completed my education
-            as a frontend developer. I attended a vocational school called KYH
-            and am now highly motivated and ready to step into the professional
-            world.
+            I am a collaborative 28-year-old who&#39;s currently working as a
+            Fullstack developer for Dreamify. Prior to this role, I completed a
+            intership and attended KYH vocational school, where I built a strong
+            foundation in software development.
           </p>
         </div>
 
@@ -35,13 +35,52 @@ export default function About() {
           <li className='font-light'>React</li>
           <li className='font-light'>Next.js</li>
           <li className='font-light'>Node.js</li>
+          <li className='font-light'>Express.js</li>
           <li className='font-light'>MongoDB</li>
+          <li className='font-light'>Mongoose</li>
           <li className='font-light'>Firebase</li>
+          <li className='font-light'>GraphQL</li>
           <li className='font-light'>Git</li>
           <li className='font-light'>MUI</li>
-          <li className='font-light'>Tailwind CSS</li>
+          <li className='font-light'>Tailwind</li>
+          <li className='font-light'>Shopify</li>
+          <li className='font-light'>Framer Motion</li>
+          <li className='font-light'>Payload CMS</li>
           <li className='font-light'>Figma</li>
           <li className='font-light'>Agile methodologies</li>
+        </div>
+
+        <div className='mb-12'>
+          <h3 className='mb-2 text-xl font-bold'>Current Time</h3>
+          <p className='font-light'>
+            I currently work as a freelancer for Dreamify, where I previously
+            completed a year-long internship. In my role as a Fullstack
+            Developer, I work on both the frontend and backend development.
+            Since we collaborate with a variety of clients, my tasks tend to be
+            very different. I&#39;ve developed multiple types of applications,
+            including desktop and mobile apps for both iOS and Android, often
+            using different technology stacks depending on the project. While
+            adapting to new stacks can be challenging, it has accelerated my
+            learning and broadened my expertise. Throughout this time, I&#39;ve
+            gained experience working with a wide range of clients, which has
+            strengthened my versatility and problem-solving skills.
+          </p>
+        </div>
+
+        <div className='mb-12'>
+          <h3 className='mb-2 text-xl font-bold'>Internship</h3>
+          <p className='font-light'>
+            Both during and after school, I pursued internships to gain easier
+            access to the industry. These experiences were highly educational
+            and rewarding, giving me the opportunity to apply my knowledge in
+            real work environments and tackle new challenges, which I
+            successfully overcame and received praise for from my supervisors.
+            During this time, I strengthened my frontend development skills and
+            worked extensively with a wide range of tools, including Next.js,
+            React, and Express.js, among others. I contributed to both frontend
+            and API backend development, which has greatly increased my
+            confidence in my abilities.
+          </p>
         </div>
 
         <div className='mb-12'>
@@ -62,36 +101,6 @@ export default function About() {
             in all final projects. This combination of frontend and backend
             knowledge makes me well-prepared to collaborate effectively with
             various team members.
-          </p>
-        </div>
-
-        <div className='mb-12'>
-          <h3 className='mb-2 text-xl font-bold'>Internship</h3>
-          <p className='font-light'>
-            My internship was an especially educational and rewarding
-            experience. I had the opportunity to apply my knowledge in a real
-            work environment and encountered several new challenges, which I
-            managed successfully, receiving much praise from my supervisor.
-            During this time, I strengthened my frontend development skills and
-            worked intensively with React and TypeScript, which has made me much
-            more confident in my abilities.
-          </p>
-        </div>
-
-        <div className='mb-12'>
-          <h3 className='mb-2 text-xl font-bold'>Current Time</h3>
-          <p className='mb-4 font-light'>
-            It&#39;s been about three months since I finished school
-            (2024-06-14). During this time, I&#39;ve worked on several smaller
-            projects, focusing on improving my existing skills while also
-            learning new programs and technologies.
-          </p>
-          <p className='font-light'>
-            Over the past few months, I&#39;ve learned Next.js and Tailwind, and
-            I&#39;ve sharpened my TypeScript skills along with my overall coding
-            abilities. Currently, I&#39;m working on this portfolio page as well
-            as a few smaller projects, including finishing a website I&#39;m
-            building for my dad which will showcase his books.
           </p>
         </div>
 
