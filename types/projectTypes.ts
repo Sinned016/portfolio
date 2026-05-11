@@ -14,6 +14,7 @@ export type ProjectsData = {
   description: string
   techStack: Stack[]
   features: Features[]
+  images?: string[]
   image1: string
   image2: string
   linkToPage: string
