@@ -78,20 +78,21 @@ const navigation = [
 
 export default function Footer() {
   return (
-    <footer className='py-8'>
+    <footer className='py-10'>
       <div className='container max-w-3xl'>
+        <div className='mb-8 h-px bg-gradient-to-r from-transparent via-border to-transparent' />
         <div className='md:flex md:items-center md:justify-between'>
-          <div className='flex justify-center space-x-6 md:order-2'>
+          <div className='flex justify-center gap-3 md:order-2'>
             {navigation.map(item => (
               <a
                 key={item.name}
                 href={item.href}
                 target='_blank'
                 rel='noreferrer noopener'
-                className='text-muted-foreground hover:text-foreground'
+                className='flex size-9 items-center justify-center rounded-full border bg-card/60 text-muted-foreground transition-all duration-300 hover:-translate-y-0.5 hover:border-foreground/30 hover:text-foreground'
               >
                 <span className='sr-only'>{item.name}</span>
-                <item.icon aria-hidden='true' className='h-5 w-5' />
+                <item.icon aria-hidden='true' className='h-4 w-4' />
               </a>
             ))}
           </div>

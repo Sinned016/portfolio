@@ -1,25 +1,22 @@
-import Link from 'next/link'
-import React from 'react'
+import ArrowLink from './arrow-link'
+import { Reveal } from './motion'
+import SectionHeading from './section-heading'
 
 export default function HomeAbout() {
   return (
-    <section className='pb-24'>
-      <div className='mb-5'>
-        <h2 className='title'>About me</h2>
-        <p className='mt-3 font-light text-muted-foreground'>
-          I am a collaborative 28-year-old who&#39;s currently working as a
+    <section className='pb-32'>
+      <SectionHeading index='01'>About me</SectionHeading>
+
+      <Reveal delay={0.1}>
+        <p className='mb-8 text-lg font-light leading-relaxed text-muted-foreground'>
+          I am a collaborative 29-year-old who&#39;s currently working as a
           Fullstack developer for Dreamify. Prior to this role, I completed a
           intership and attended KYH vocational school, where I built a strong
           foundation in software development.
         </p>
-      </div>
 
-      <Link
-        className='font-light text-muted-foreground underline'
-        href='/about'
-      >
-        More about me
-      </Link>
+        <ArrowLink href='/about'>More about me</ArrowLink>
+      </Reveal>
     </section>
   )
 }

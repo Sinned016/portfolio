@@ -5,7 +5,7 @@ export const revalidate = 60
 
 export default async function Home() {
   return (
-    <section className='py-24'>
+    <section className='pb-24 pt-36'>
       <div className='container max-w-3xl'>
         <Intro />
 

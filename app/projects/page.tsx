@@ -3,6 +3,7 @@ import { ProjectsData } from '@/types/projectTypes'
 import { collection, getDocs, orderBy, query } from 'firebase/firestore'
 import React from 'react'
 import HomeProjects from '@/components/homeProjects'
+import SectionHeading from '@/components/section-heading'
 export const revalidate = 60
 
 async function getProjects(): Promise<ProjectsData[]> {
@@ -19,8 +20,6 @@ async function getProjects(): Promise<ProjectsData[]> {
       }
     })
 
-    console.log(projects)
-
     return projects
   } catch (err) {
     console.error(err)
@@ -31,9 +30,11 @@ async function getProjects(): Promise<ProjectsData[]> {
 export default async function Projects() {
   const projects: ProjectsData[] = await getProjects()
   return (
-    <section className='py-24'>
+    <section className='pb-24 pt-32'>
       <div className='container max-w-3xl'>
-        <h2 className='title mb-12'>Projects</h2>
+        <SectionHeading as='h1' index='Selected work'>
+          Projects
+        </SectionHeading>
 
         <HomeProjects projects={projects} />
       </div>

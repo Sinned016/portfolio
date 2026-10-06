@@ -1,6 +1,5 @@
-
-import { db } from "@/config/firebaseAdmin"
-import { NextResponse } from "next/server"
+import { db } from '@/config/firebaseAdmin'
+import { NextResponse } from 'next/server'
 
 export async function POST(req: Request) {
   try {
@@ -8,23 +7,23 @@ export async function POST(req: Request) {
 
     const { name, description, linkToPage, features, techStack, images } = body
 
-    const docRef = await db.collection("projects").add({
+    const docRef = await db.collection('projects').add({
       name,
       description,
       linkToPage,
       features,
       techStack,
       images,
-      createdAt: new Date(),
+      createdAt: new Date()
     })
 
     return NextResponse.json({
       id: docRef.id,
-      success: true,
+      success: true
     })
   } catch (error) {
     return NextResponse.json(
-      { error: "Failed to create project. " + error },
+      { error: 'Failed to create project. ' + error },
       { status: 500 }
     )
   }

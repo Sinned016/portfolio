@@ -7,6 +7,7 @@ import './globals.css'
 import Providers from '@/components/providers'
 import Header from '@/components/header'
 import Footer from '@/components/footer'
+import Background from '@/components/background'
 
 const inter = Inter({ subsets: ['latin'], variable: '--font-sans' })
 const playfair = Playfair_Display({
@@ -28,12 +29,13 @@ export default function RootLayout({
     <html lang='en' suppressHydrationWarning>
       <body
         className={cn(
-          'flex min-h-screen flex-col font-sans antialiased',
+          'relative flex min-h-screen flex-col font-sans antialiased',
           inter.variable,
           playfair.variable
         )}
       >
         <Providers>
+          <Background />
           <Header />
           <main className='grow'>{children}</main>
           <Footer />

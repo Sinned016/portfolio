@@ -1,5 +1,6 @@
 'use client'
 
+import { MotionConfig } from 'framer-motion'
 import { ThemeProvider } from 'next-themes'
 
 export default function Providers({ children }: { children: React.ReactNode }) {
@@ -10,7 +11,7 @@ export default function Providers({ children }: { children: React.ReactNode }) {
       defaultTheme='system'
       disableTransitionOnChange
     >
-      {children}
+      <MotionConfig reducedMotion='user'>{children}</MotionConfig>
     </ThemeProvider>
   )
 }

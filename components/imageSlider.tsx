@@ -30,14 +30,14 @@ export default function ImageSlider({ images = [] }: ImageSliderProps) {
 
   if (!images.length) {
     return (
-      <div className='relative mb-2 h-72 rounded-lg bg-muted sm:h-[380px] flex justify-center items-center'>
-        <span className="text-white text-sm">No image</span>
+      <div className='relative mb-2 flex h-72 items-center justify-center rounded-xl bg-muted sm:h-[380px]'>
+        <span className='text-sm text-muted-foreground'>No image</span>
       </div>
     )
   }
 
   return (
-    <div className='relative mb-2 h-72 rounded-lg bg-muted sm:h-[380px] overflow-hidden'>
+    <div className='relative mb-2 h-72 overflow-hidden rounded-xl bg-muted sm:h-[380px]'>
       <div
         className={`absolute inset-0 transition-opacity duration-200 ${
           fade ? 'opacity-0' : 'opacity-100'
@@ -55,16 +55,16 @@ export default function ImageSlider({ images = [] }: ImageSliderProps) {
         <>
           <button
             onClick={previous}
-            className='absolute left-2 top-1/2 -translate-y-1/2 rounded bg-black/50 p-2 text-white hover:bg-black/70 transition'
+            className='absolute left-2 top-1/2 -translate-y-1/2 rounded bg-black/50 p-2 text-white transition hover:bg-black/70'
           >
-            <ChevronLeftIcon className='w-6 h-6' />
+            <ChevronLeftIcon className='h-6 w-6' />
           </button>
 
           <button
             onClick={next}
-            className='absolute right-2 top-1/2 -translate-y-1/2 rounded bg-black/50 p-2 text-white hover:bg-black/70 transition'
+            className='absolute right-2 top-1/2 -translate-y-1/2 rounded bg-black/50 p-2 text-white transition hover:bg-black/70'
           >
-            <ChevronRightIcon className='w-6 h-6' />
+            <ChevronRightIcon className='h-6 w-6' />
           </button>
 
           <div className='absolute bottom-2 right-2 rounded bg-black/60 px-2 py-1 text-xs text-white'>

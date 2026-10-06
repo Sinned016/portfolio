@@ -1,8 +1,9 @@
 import db from '@/config/firebaseConfig'
 import { ProjectsData } from '@/types/projectTypes'
 import { collection, getDocs, orderBy, query } from 'firebase/firestore'
-import Link from 'next/link'
 import HomeProjects from './homeProjects'
+import ArrowLink from './arrow-link'
+import SectionHeading from './section-heading'
 
 // Function to fetch projects from Firebase
 async function getProjects(): Promise<ProjectsData[]> {
@@ -30,21 +31,14 @@ async function getProjects(): Promise<ProjectsData[]> {
 export default async function RecentProjects() {
   const projects = await getProjects()
 
-  console.log(projects)
-
   return (
     <section>
       <div>
-        <h2 className='title mb-12'>Recent projects</h2>
+        <SectionHeading index='02'>Recent projects</SectionHeading>
 
         <HomeProjects projects={projects} limit={2} />
 
-        <Link
-          className='font-light text-muted-foreground underline'
-          href='/projects'
-        >
-          All projects
-        </Link>
+        <ArrowLink href='/projects'>All projects</ArrowLink>
       </div>
     </section>
   )
