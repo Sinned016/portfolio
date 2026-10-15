@@ -2,7 +2,7 @@
 
 import Image from 'next/image'
 import { motion, type Variants } from 'framer-motion'
-import authorImage from '@/public/images/authors/Dennis_blomberg1.jpg'
+import authorImage from '@/public/images/authors/Dennis_blomberg2.jpeg'
 
 const ease = [0.22, 1, 0.36, 1] as const
 
@@ -87,11 +87,10 @@ export default function Intro() {
         <div className='absolute -inset-3 -z-10 rounded-3xl bg-[hsl(var(--glow)/0.5)] blur-2xl' />
         <div className='rounded-2xl border bg-card p-2 shadow-xl shadow-foreground/10'>
           <Image
-            className='rounded-xl'
+            className='max-h-64 rounded-xl object-cover object-top'
             src={authorImage}
             alt='Dennis Blomberg'
-            width={175}
-            height={175}
+            width={176}
             priority
           />
         </div>
