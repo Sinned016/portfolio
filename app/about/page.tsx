@@ -1,6 +1,6 @@
 import Image from 'next/image'
 import React from 'react'
-import authorImage from '@/public/images/authors/Dennis_blomberg1.jpg'
+import authorImage from '@/public/images/authors/Dennis_blomberg2.jpeg'
 import { Reveal, Stagger, StaggerItem } from '@/components/motion'
 import SectionHeading from '@/components/section-heading'
 
@@ -52,11 +52,10 @@ export default function About() {
           <Reveal className='float-right mb-4 ml-6 hidden sm:block'>
             <div className='rotate-3 rounded-2xl border bg-card p-2 shadow-xl shadow-foreground/10 transition-transform duration-500 hover:rotate-0'>
               <Image
-                className='rounded-xl'
+                className='max-h-64 rounded-xl object-cover object-top'
                 src={authorImage}
                 alt='Dennis Blomberg'
-                width={175}
-                height={175}
+                width={176}
                 priority
               />
             </div>
