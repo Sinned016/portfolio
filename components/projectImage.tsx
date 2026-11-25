@@ -12,7 +12,7 @@ export default function ProjectImage({
   const [loaded, setLoaded] = useState(false)
 
   return (
-    <div className='relative overflow-hidden rounded-lg bg-muted sm:h-60'>
+    <div className='relative h-full w-full overflow-hidden rounded-lg bg-muted'>
       {/* spinner placeholder */}
       {!loaded && (
         <div className='absolute inset-0 flex items-center justify-center'>
@@ -24,6 +24,7 @@ export default function ProjectImage({
         src={src}
         alt={alt}
         fill
+        sizes='(min-width: 640px) 50vw, 100vw'
         className={`object-cover object-center transition-opacity duration-500 ${
           loaded ? 'opacity-100' : 'opacity-0'
         }`}
